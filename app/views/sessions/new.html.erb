@@ -1,0 +1,9 @@
+<% flash.each do |key, value| %>
+  <%= value %>
+<% end %>
+
+<%= form_for(:session, url: login_path) do |f| %>
+  <%= f.text_field :username %>
+  <%= f.text_field :password %>
+  <%= f.submit 'Login' %>
+<% end %>
